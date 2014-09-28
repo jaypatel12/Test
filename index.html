@@ -6,9 +6,7 @@
 	<title>Notifaction Application</title>
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/jquery.mobile.min.js"></script>
     <script src="js/jquery.confirm.js"></script>
-    <script src="js/lab1.js"></script>
     <style type="text/css">
     #complexConfirm{
     color: #000;
@@ -24,18 +22,18 @@
     
     <script>
             $("#complexConfirm").confirm({
-                title:"Delete confirmation",
-                text: "This is very dangerous, you shouldn't do it! Are you really really sure?",
+                title:"Game Over",
+                text: "You are winner",
                 confirm: function(button) {
                     button.fadeOut(2000).fadeIn(2000);
-                    alert("You just confirmed.");
+                    alert("Your will Game Restart.");
                 },
                 cancel: function(button) {
                     button.fadeOut(2000).fadeIn(2000);
-                    alert("You aborted the operation.");
+                    alert("You will exit from game.");
                 },
-                confirmButton: "Yes I am",
-                cancelButton: "No"
+                confirmButton: "Restart",
+                cancelButton: "Exit"
             });
         </script>
     <script src="js/bootstrap.min.js"></script>
