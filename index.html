@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
   <head>
     <title>Notification Example</title>
 
@@ -38,3 +39,44 @@
     <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
   </body>
 </html>
+=======
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Notifaction Application</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.confirm.js"></script>
+    <style type="text/css">
+    #complexConfirm{
+    color: #000;
+    }
+    </style>
+</head>
+<body>
+    <div>
+	   <a href="#" id="complexConfirm">Show Confirm</a>
+    </div>
+    
+    
+    
+    <script>
+            $("#complexConfirm").confirm({
+                title:"Game Over",
+                text: "You are winner",
+                confirm: function(button) {
+                    button.fadeOut(2000).fadeIn(2000);
+                    alert("Your will Game Restart.");
+                },
+                cancel: function(button) {
+                    button.fadeOut(2000).fadeIn(2000);
+                    alert("You will exit from game.");
+                },
+                confirmButton: "Restart",
+                cancelButton: "Exit"
+            });
+        </script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+>>>>>>> origin/master

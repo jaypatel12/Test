@@ -69,4 +69,8 @@ this is develop for lab 1 at fanshawe college		</description>
         <icon src="res/icon/logo.png" gap:platform="android" gap:density="hdpi" />
         <icon src="res/icon/logo.png" gap:platform="android" gap:density="xhdpi" />
         <icon src="res/icon/logo.png" gap:platform="android" gap:density="xxhdpi" />
+<<<<<<< HEAD
 	</widget>
+=======
+	</widget>
+>>>>>>> origin/master
