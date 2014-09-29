@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Notifaction Application</title>
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/jquery.mobile.min.js"></script>
-    <script src="js/jquery.confirm.js"></script>
-    <script src="js/lab1.js"></script>
-    <style type="text/css">
-    #complexConfirm{
-    color: #000;
+  <head>
+    <title>Notification Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="js/phonegap-1.4.1.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Empty
     }
-    </style>
-</head>
-<body>
-    <div>
-	   <a href="#" id="complexConfirm">Show Confirm</a>
-    </div>
-    
-    
-    
-    <script>
-            $("#complexConfirm").confirm({
-                title:"Delete confirmation",
-                text: "This is very dangerous, you shouldn't do it! Are you really really sure?",
-                confirm: function(button) {
-                    button.fadeOut(2000).fadeIn(2000);
-                    alert("You just confirmed.");
-                },
-                cancel: function(button) {
-                    button.fadeOut(2000).fadeIn(2000);
-                    alert("You aborted the operation.");
-                },
-                confirmButton: "Yes I am",
-                cancelButton: "No"
-            });
-        </script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
+
+    // alert dialog dismissed
+    function alertDismissed() {
+        // do something
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    </script>
+  </head>
+  <body>
+    <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+  </body>
 </html>

@@ -98,12 +98,13 @@
                             modalHeader +
                             '<div class="modal-body">' + settings.text + '</div>' +
                             '<div class="modal-footer">' +
-                                '<button class="confirm btn ' + settings.confirmButtonClass + '" type="button" data-dismiss="modal">' +
-                                    settings.confirmButton +
-                                '</button>' +
+                                
                                 '<button class="cancel btn btn-default" type="button" data-dismiss="modal">' +
                                     settings.cancelButton +
-                                '</div>' +
+                                '</button>'+
+                                '<button class="confirm btn ' + settings.confirmButtonClass + '" type="button" data-dismiss="modal">' +
+                                    settings.confirmButton +
+                                '</button>' + '</div>' +
                             '</div>' +
                         '</div>' +
                     '</div>' +
